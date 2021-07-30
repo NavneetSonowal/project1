@@ -1,0 +1,65 @@
+<html>
+
+<body>
+
+    <head>
+        Subscription form
+    </head>
+    <style>
+        form {
+            border: 5px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+    </style>
+    <form>
+        <div>
+            <input type="text" name="fullname" id="fullname" placeholder="Full name">
+        </div>
+        <div>
+            <input type="email" name="email" id="email" placeholder="E-mail">
+        </div>
+        <div>
+            <input type="text" name="address" id="address" placeholder="address">
+        </div>
+        <div>
+            <button onclick="FormValidation()"> SUBSCRIBE</button>
+        </div>
+    </form>
+    <script>
+        function FormValidation() {
+            var fullname = document.getElementById("fullname").value;
+
+            var email = document.getElementById("email").value;
+            var address = document.getElementById("address").value;
+
+
+
+            //Error Validation
+
+            if (fullname == '' && email == '' && address == '') {
+                alert("All fields are mandatory");
+            }
+           else if (email == '') {
+               alert("Please enter your email")
+           }
+
+
+            else {
+                alert("form submitted");
+            }
+
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
